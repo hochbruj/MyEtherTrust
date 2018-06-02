@@ -1,0 +1,1 @@
+export default () => <div>My start page</div>
