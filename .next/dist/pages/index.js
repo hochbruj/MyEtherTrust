@@ -115,22 +115,43 @@ var TrustIndex = function (_Component) {
     }
 
     (0, _createClass3.default)(TrustIndex, [{
+        key: 'renderInfoMessage',
+        value: function renderInfoMessage() {
+            if (this.state.createdTrusts.length == 0 && this.state.benefitTrusts.length == 0) {
+                return _react2.default.createElement(_semanticUiReact.Message, { info: true, color: 'blue', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 25
+                    }
+                }, _react2.default.createElement(_semanticUiReact.Message.Header, {
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 26
+                    }
+                }, 'Welcome to MyEtherTrust'), _react2.default.createElement('p', {
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 27
+                    }
+                }, 'This Ethereum DApp lets you set up smart contracts on the  Ropsten Test Network. These contracts act as trusts. You can define a beneficiary and a weekly withdrawal limit. Only the beneficiary will be able to withdraw ethers up to the limit. Before you start please make sure you have installed MetaMask and selected the Ropsten Test Network.'));
+            }
+        }
+    }, {
         key: 'renderCreatedTrusts',
         value: function renderCreatedTrusts() {
             if (this.state.createdTrusts.length > null) {
                 return _react2.default.createElement(_semanticUiReact.Container, { style: { marginTop: 20 }, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 25
+                        lineNumber: 36
                     }
                 }, _react2.default.createElement('h2', {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 26
+                        lineNumber: 37
                     }
                 }, 'Trusts which I set up'), _react2.default.createElement(_CreatedTrusts2.default, {
                     trusts: this.state.createdTrusts, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 27
+                        lineNumber: 38
                     }
                 }));
             }
@@ -141,17 +162,17 @@ var TrustIndex = function (_Component) {
             if (this.state.benefitTrusts.length > null) {
                 return _react2.default.createElement(_semanticUiReact.Container, { style: { marginTop: 20 }, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 37
+                        lineNumber: 48
                     }
                 }, _react2.default.createElement('h2', {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 38
+                        lineNumber: 49
                     }
                 }, 'Trusts which I am a benficiary to'), _react2.default.createElement(_BenefitTrusts2.default, {
                     trusts: this.state.benefitTrusts, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 39
+                        lineNumber: 50
                     }
                 }));
             }
@@ -162,9 +183,9 @@ var TrustIndex = function (_Component) {
             return _react2.default.createElement(_Layout2.default, {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 50
+                    lineNumber: 61
                 }
-            }, this.renderCreatedTrusts(), this.renderBenefitTrusts());
+            }, this.renderInfoMessage(), this.renderCreatedTrusts(), this.renderBenefitTrusts());
         }
     }]);
 
@@ -172,4 +193,4 @@ var TrustIndex = function (_Component) {
 }(_react.Component);
 
 exports.default = TrustIndex;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxpbmRleC5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsIkNvbXBvbmVudCIsIkxheW91dCIsImZhY3RvcnkiLCJ3ZWIzIiwiQ3JlYXRlZFRydXN0cyIsIkJlbmVmaXRUcnVzdHMiLCJDb250YWluZXIiLCJUcnVzdEluZGV4Iiwic3RhdGUiLCJjcmVhdGVkVHJ1c3RzIiwiYmVuZWZpdFRydXN0cyIsImNvbXBvbmVudERpZE1vdW50IiwiZXRoIiwiZ2V0QWNjb3VudHMiLCJhY2NvdW50cyIsIm1ldGhvZHMiLCJnZXRDcmVhdGVkVHJ1c3RzIiwiY2FsbCIsImdldEJlbmVmaXRUcnVzdHMiLCJzZXRTdGF0ZSIsImxlbmd0aCIsIm1hcmdpblRvcCIsInJlbmRlckNyZWF0ZWRUcnVzdHMiLCJyZW5kZXJCZW5lZml0VHJ1c3RzIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFTOzs7O0FBQ2hCLEFBQU8sQUFBWTs7OztBQUNuQixBQUFPLEFBQWE7Ozs7QUFDcEIsQUFBTyxBQUFVOzs7O0FBQ2pCLEFBQU8sQUFBbUI7Ozs7QUFDMUIsQUFBTyxBQUFtQjs7OztBQUMxQixBQUFTOzs7Ozs7O0lBRUgsQTs7Ozs7Ozs7Ozs7Ozs7O3dOLEFBQ0Y7MkJBQVEsQUFDVyxBQUNmOzJCQUZJLEFBRVcsQTtBQUZYLEFBQ0osaUIsQUFJSiw2RkFBb0IsbUJBQUE7eUNBQUE7MEVBQUE7MEJBQUE7cURBQUE7NkJBQUE7NENBQUE7bUNBQ08sY0FBQSxBQUFLLElBRFosQUFDTyxBQUFTOzs2QkFBMUI7QUFEVSxnREFBQTs0Q0FBQTttQ0FFWSxrQkFBQSxBQUFRLFFBQVIsQUFBZ0IsaUJBQWlCLFNBQWpDLEFBQWlDLEFBQVMsSUFGdEQsQUFFWSxBQUE4Qzs7NkJBQXBFO0FBRlUscURBQUE7NENBQUE7bUNBR1ksa0JBQUEsQUFBUSxRQUFSLEFBQWdCLGlCQUFpQixTQUFqQyxBQUFpQyxBQUFTLElBSHRELEFBR1ksQUFBOEM7OzZCQUFwRTtBQUhVLHFEQUloQjs7a0NBQUEsQUFBSyxTQUFTLEVBQUUsZUFBRixlQUFpQixlQUpmLEFBSWhCLEFBQWM7OzZCQUpFOzZCQUFBOzRDQUFBOztBQUFBO3dCQUFBO0E7Ozs7OzhDQU9FLEFBQ2xCO2dCQUFJLEtBQUEsQUFBSyxNQUFMLEFBQVcsY0FBWCxBQUF5QixTQUE3QixBQUFzQyxNQUFNLEFBQ3hDO3VDQUNJLEFBQUMsNENBQVUsT0FBTyxFQUFFLFdBQXBCLEFBQWtCLEFBQVk7a0NBQTlCO29DQUFBLEFBQ007QUFETjtpQkFBQSxrQkFDTSxjQUFBOztrQ0FBQTtvQ0FBQTtBQUFBO0FBQUEsbUJBRE4sQUFDTSxBQUNBLDBDQUFBLEFBQUM7NEJBQ0ssS0FBQSxBQUFLLE1BRFgsQUFDaUI7a0NBRGpCO29DQUhWLEFBQ0ksQUFFTSxBQUliO0FBSmE7QUFDRjtBQUlmOzs7OzhDQUVxQixBQUNsQjtnQkFBSSxLQUFBLEFBQUssTUFBTCxBQUFXLGNBQVgsQUFBeUIsU0FBN0IsQUFBc0MsTUFBTSxBQUN4Qzt1Q0FDSSxBQUFDLDRDQUFVLE9BQU8sRUFBRSxXQUFwQixBQUFrQixBQUFZO2tDQUE5QjtvQ0FBQSxBQUNNO0FBRE47aUJBQUEsa0JBQ00sY0FBQTs7a0NBQUE7b0NBQUE7QUFBQTtBQUFBLG1CQUROLEFBQ00sQUFDQSxzREFBQSxBQUFDOzRCQUNLLEtBQUEsQUFBSyxNQURYLEFBQ2lCO2tDQURqQjtvQ0FIVixBQUNJLEFBRU0sQUFJYjtBQUphO0FBQ0Y7QUFJZjs7OztpQ0FJUSxBQUNMO21DQUNBLEFBQUM7OzhCQUFEO2dDQUFBLEFBQ0s7QUFETDtBQUFBLGFBQUEsT0FBQSxBQUNLLEFBQUssQUFDTCw0QkFITCxBQUNBLEFBRUssQUFBSyxBQUVSOzs7OztBQTdDZSxBLEFBZ0R6Qjs7a0JBQUEsQUFBZSIsImZpbGUiOiJpbmRleC5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiJDOi9Vc2Vycy9KYW4vRVRIX1Byb2plY3RzL015RXRoZXJUcnVzdCJ9
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxpbmRleC5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsIkNvbXBvbmVudCIsIkxheW91dCIsImZhY3RvcnkiLCJ3ZWIzIiwiQ3JlYXRlZFRydXN0cyIsIkJlbmVmaXRUcnVzdHMiLCJDb250YWluZXIiLCJNZXNzYWdlIiwiVHJ1c3RJbmRleCIsInN0YXRlIiwiY3JlYXRlZFRydXN0cyIsImJlbmVmaXRUcnVzdHMiLCJjb21wb25lbnREaWRNb3VudCIsImV0aCIsImdldEFjY291bnRzIiwiYWNjb3VudHMiLCJtZXRob2RzIiwiZ2V0Q3JlYXRlZFRydXN0cyIsImNhbGwiLCJnZXRCZW5lZml0VHJ1c3RzIiwic2V0U3RhdGUiLCJsZW5ndGgiLCJtYXJnaW5Ub3AiLCJyZW5kZXJJbmZvTWVzc2FnZSIsInJlbmRlckNyZWF0ZWRUcnVzdHMiLCJyZW5kZXJCZW5lZml0VHJ1c3RzIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFTOzs7O0FBQ2hCLEFBQU8sQUFBWTs7OztBQUNuQixBQUFPLEFBQWE7Ozs7QUFDcEIsQUFBTyxBQUFVOzs7O0FBQ2pCLEFBQU8sQUFBbUI7Ozs7QUFDMUIsQUFBTyxBQUFtQjs7OztBQUMxQixBQUFTLEFBQVc7Ozs7Ozs7SUFFZCxBOzs7Ozs7Ozs7Ozs7Ozs7d05BQ0YsQTsyQkFBUSxBQUNXLEFBQ2Y7MkJBRkksQSxBQUVXO0FBRlgsQUFDSixpQkFJSixBLDZGQUFvQixtQkFBQTt5Q0FBQTswRUFBQTswQkFBQTtxREFBQTs2QkFBQTs0Q0FBQTttQ0FDTyxjQUFBLEFBQUssSUFEWixBQUNPLEFBQVM7OzZCQUExQjtBQURVLGdEQUFBOzRDQUFBO21DQUVZLGtCQUFBLEFBQVEsUUFBUixBQUFnQixpQkFBaUIsU0FBakMsQUFBaUMsQUFBUyxJQUZ0RCxBQUVZLEFBQThDOzs2QkFBcEU7QUFGVSxxREFBQTs0Q0FBQTttQ0FHWSxrQkFBQSxBQUFRLFFBQVIsQUFBZ0IsaUJBQWlCLFNBQWpDLEFBQWlDLEFBQVMsSUFIdEQsQUFHWSxBQUE4Qzs7NkJBQXBFO0FBSFUscURBSWhCOztrQ0FBQSxBQUFLLFNBQVMsRUFBRSxlQUFGLGVBQWlCLGVBSmYsQUFJaEIsQUFBYzs7NkJBSkU7NkJBQUE7NENBQUE7O0FBQUE7d0JBQUE7QTs7Ozs7NENBT0EsQUFDaEI7Z0JBQUksS0FBQSxBQUFLLE1BQUwsQUFBVyxjQUFYLEFBQXlCLFVBQXpCLEFBQW1DLEtBQUssS0FBQSxBQUFLLE1BQUwsQUFBVyxjQUFYLEFBQXlCLFVBQXJFLEFBQStFLEdBQUcsQUFDOUU7dUNBQ0ksQUFBQywwQ0FBUSxNQUFULE1BQWMsT0FBZCxBQUFvQjtrQ0FBcEI7b0NBQUEsQUFDSTtBQURKO2lCQUFBLGtCQUNLLGNBQUQseUJBQUEsQUFBUzs7a0NBQVQ7b0NBQUE7QUFBQTtBQUFBLG1CQURKLEFBQ0ksQUFDQyw0Q0FBQSxjQUFBOztrQ0FBQTtvQ0FBQTtBQUFBO0FBQUEsbUJBSFQsQUFDSSxBQUVLLEFBR1o7QUFDSjs7Ozs4Q0FFcUIsQUFDbEI7Z0JBQUksS0FBQSxBQUFLLE1BQUwsQUFBVyxjQUFYLEFBQXlCLFNBQTdCLEFBQXNDLE1BQU0sQUFDeEM7dUNBQ0ksQUFBQyw0Q0FBVSxPQUFPLEVBQUUsV0FBcEIsQUFBa0IsQUFBWTtrQ0FBOUI7b0NBQUEsQUFDTTtBQUROO2lCQUFBLGtCQUNNLGNBQUE7O2tDQUFBO29DQUFBO0FBQUE7QUFBQSxtQkFETixBQUNNLEFBQ0EsMENBQUEsQUFBQzs0QkFDSyxLQUFBLEFBQUssTUFEWCxBQUNpQjtrQ0FEakI7b0NBSFYsQUFDSSxBQUVNLEFBSWI7QUFKYTtBQUNGO0FBSWY7Ozs7OENBRXFCLEFBQ2xCO2dCQUFJLEtBQUEsQUFBSyxNQUFMLEFBQVcsY0FBWCxBQUF5QixTQUE3QixBQUFzQyxNQUFNLEFBQ3hDO3VDQUNJLEFBQUMsNENBQVUsT0FBTyxFQUFFLFdBQXBCLEFBQWtCLEFBQVk7a0NBQTlCO29DQUFBLEFBQ007QUFETjtpQkFBQSxrQkFDTSxjQUFBOztrQ0FBQTtvQ0FBQTtBQUFBO0FBQUEsbUJBRE4sQUFDTSxBQUNBLHNEQUFBLEFBQUM7NEJBQ0ssS0FBQSxBQUFLLE1BRFgsQUFDaUI7a0NBRGpCO29DQUhWLEFBQ0ksQUFFTSxBQUliO0FBSmE7QUFDRjtBQUlmOzs7O2lDQUlRLEFBQ0w7bUNBQ0EsQUFBQzs7OEJBQUQ7Z0NBQUEsQUFDSztBQURMO0FBQUEsYUFBQSxPQUFBLEFBQ0ssQUFBSyxBQUNMLDBCQUZMLEFBRUssQUFBSyxBQUNMLDRCQUpMLEFBQ0EsQUFHSyxBQUFLLEFBRVI7Ozs7O0FBekRlLEEsQUE0RHpCOztrQkFBQSxBQUFlIiwiZmlsZSI6ImluZGV4LmpzP2VudHJ5Iiwic291cmNlUm9vdCI6IkM6L1VzZXJzL0phbi9FVEhfUHJvamVjdHMvTXlFdGhlclRydXN0In0=
