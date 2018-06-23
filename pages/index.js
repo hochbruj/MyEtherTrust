@@ -24,7 +24,7 @@ class TrustIndex extends Component {
             return (
                 <Message info color='blue'>
                     <Message.Header>Welcome to MyEtherTrust</Message.Header>
-                     <p>This Ethereum DApp lets you set up smart contracts on the  Ropsten Test Network. These contracts act as trusts. You can define a beneficiary and a weekly withdrawal limit. Only the beneficiary will be able to withdraw ethers up to the limit. Before you start please make sure you have installed MetaMask and selected the Ropsten Test Network.</p>
+                     <p>This Ethereum DApp lets you set up smart contracts on the  Rinkeby Test Network. These contracts act as trusts. You can define a beneficiary and a weekly withdrawal limit. Only the beneficiary will be able to withdraw ethers up to the limit. Before you start please make sure you have installed MetaMask and selected the Rinkeby Test Network.</p>
                     </Message>
             )
         }
